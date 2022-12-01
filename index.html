@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        background-color: black;
+      }
+      .main__link {
+        display: flex;
+        font-size: 2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+
+        color: white;
+      }
+      .main__link > li {
+        display: flex;
+        background-color: blueviolet;
+        transition: background-color 1.25ms
+          cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .main__link > li:not(:last-child) {
+        margin-right: 20px;
+      }
+      .main__link > li:hover {
+        background-color: red;
+      }
+      .link {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <ul class="main__link">
+          <li>
+            <a href="./html/gallery.html" class="link">text</a>
+          </li>
+          <li class="link">home</li>
+          <li class="link">?</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="boxSize">
+            <button class="sizeBtn" value="11">size 11</button>
+            <button class="sizeBtn" value="14">size 14</button>
+            <button class="sizeBtnSort" value="16">size 16</button>
+            <button class="sizeBtnSort" value="18">size 18</button>
+            <button class="sizeBtnSort" value="22">size 22</button>
+            <button class="sizeBtnBig" value="32">size 32</button>
+          </div>
+
+          <div>
+            <p style="color: #fff">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Ad ratione optio eligendi adipisci perferendis soluta
+              dolores, eius incidunt officia alias vero omnis odio
+              iure accusantium cupiditate iusto modi facere
+              exercitationem.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <form class="forma" autocomplete="on">
+            <label>Name <input type="text" name="name" /> </label>
+            <label>Number <input type="text" name="number" /> </label>
+            <button class="submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
