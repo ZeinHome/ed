@@ -337,3 +337,29 @@ button#equal {
 .calculator.dark button.btn-equal {
   background-color: #223323;
 }
+/* Along */
+
+.snekers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.snekers li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  margin-right: 29px;
+  margin-bottom: 40px;
+}
+
+.snekers li:nth-child(4n + 4) {
+  margin-right: 0;
+}
+.snekers img {
+  width: 100%;
+  height: 350px;
+}
+
+.snekersTittle {
+  font-size: 24px;
+}
