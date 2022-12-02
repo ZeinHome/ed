@@ -191,7 +191,11 @@ Primi World
   padding: 10px;
 }
 /* Calculator */
-
+.back {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+}
 .CalculatorBody {
   background-image: linear-gradient(
     to bottom right,
@@ -199,6 +203,7 @@ Primi World
     rgb(2, 8, 184),
     rgb(0, 0, 0)
   );
+  background-repeat: no-repeat;
 }
 
 .containerCalculator {
