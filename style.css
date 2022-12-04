@@ -1,9 +1,13 @@
+:root {
+  --color-dark: #21213f;
+  --color-ligth: #fff;
+}
+
 * {
   padding: 0;
   margin: 0;
   outline: 0;
   box-sizing: border-box;
-  transition: all 0.5s ease;
 }
 
 a {
@@ -222,7 +226,7 @@ Primi World
   box-shadow: 0 0 30px #000;
 }
 
-.theme-toggler {
+/* .theme-toggler {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -234,11 +238,71 @@ Primi World
 .theme-toggler .active {
   background-color: #333;
 }
-.theme-toggler .active::before {
+.theme-toggler.active::before {
   background-color: #fff;
+} */
+
+.theme-toggler {
+  display: none;
 }
 
-.theme-toggler::before {
+.switch {
+  overflow: hidden;
+  display: flex;
+  width: 60px;
+  height: 30px;
+  padding: 3px;
+  border-radius: 15px;
+  background-color: var(--color-dark);
+  cursor: pointer;
+}
+
+.handel {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+
+.handel::before,
+.handel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.handel::before {
+  background-color: var(--color-ligth);
+}
+
+.handel::after {
+  background-color: var(--color-dark);
+  opacity: 0;
+  transform: translate(-7px, -7px);
+  transition: none;
+}
+
+.theme.active .handel {
+  transform: translate(30px, 0);
+}
+
+.theme.active .handel::after {
+  opacity: 1;
+  background-color: var(--color-ligth);
+}
+
+.theme.active .handel::before {
+  background-color: var(--color-dark);
+}
+.theme.active .switch {
+  background-color: var(--color-ligth);
+}
+
+/* .theme-toggler::before {
   content: '';
   height: 30px;
   width: 30px;
@@ -248,7 +312,7 @@ Primi World
   border-radius: 50%;
   background-color: #333;
   z-index: -1;
-}
+} */
 #display {
   margin: 0 10px;
   height: 150px;
@@ -338,10 +402,11 @@ button#equal {
   background-color: #223323;
 }
 /* Along */
-
+/* width: calc((100% - 30px) / 2); */
 .snekers {
   display: flex;
   flex-wrap: wrap;
+  padding: 40px 0;
 }
 .snekers li {
   display: flex;

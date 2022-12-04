@@ -3,7 +3,7 @@ const refs = {
   button: document.querySelectorAll('button'),
   themeToggleBtn: document.querySelector('.theme-toggler'),
   calculator: document.querySelector('.calculator'),
-  toggleIcon: document.querySelector('.toggler-icon'),
+  theme: document.querySelector('.theme'),
 };
 
 refs.button.forEach((item) => {
@@ -36,6 +36,6 @@ let dark = true;
 
 refs.themeToggleBtn.onclick = () => {
   refs.calculator.classList.toggle('dark');
-  refs.themeToggleBtn.classList.toggle('active');
+  refs.theme.classList.toggle('active');
   dark = !dark;
 };
