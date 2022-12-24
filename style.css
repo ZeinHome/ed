@@ -194,7 +194,8 @@ Primi World
   border-top: 0;
   padding: 10px;
 }
-/* Calculator */
+/* Calculator ------------------------------------*/
+
 .back {
   font-size: 22px;
   font-weight: 800;
@@ -341,6 +342,13 @@ button {
   transition: all 200ms ease;
 }
 
+@media screen and (max-width: 480px) {
+  button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 button:hover {
   transform: scale(1.1);
 }
@@ -427,4 +435,11 @@ button#equal {
 
 .snekersTittle {
   font-size: 24px;
+}
+/* HTML CSS */
+
+.inlineText {
+  display: inline;
+  border: 2px solid;
+  padding: 15px;
 }

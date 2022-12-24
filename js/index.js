@@ -98,19 +98,6 @@ function keyboard(event) {
 }
 
 document.removeEventListener('keydown', keyboard);
-// var f = function () {
-//   console.log(1);
-// };
-
-// var execute = function (f) {
-//   setTimeout(f, 1000);
-// };
-
-// execute(f);
-
-// f = function () {
-//   console.log(2);
-// };
 
 const car = ['BMW', 'Lexus', 'Tesla', 'Skoda'];
 
