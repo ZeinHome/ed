@@ -108,3 +108,32 @@ function destructuring(arr) {
 // console.log(destructuring(car));
 
 // obj.myCat();
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+    date: new Date(123),
+  },
+  {
+    title: 'На берегу спокойных вод',
+    author: 'Роберт Шекли',
+    rating: 8.51,
+    date: new Date(123),
+  },
+  {
+    title: 'Сон смешного человека',
+    author: 'Федор Достоевский',
+    rating: 7.75,
+    date: new Date(123),
+  },
+];
+
+const copied = JSON.parse(JSON.stringify(books));
+
+const newCopeid = structuredClone(books);
+
+console.log(copied);
+
+console.log(newCopeid);
